@@ -1,0 +1,17 @@
+
+syntax = "proto3";
+
+package example.v1;
+
+service ExampleService {
+  rpc GetExample(GetExampleRequest) returns (GetExampleResponse) {}
+}
+
+message GetExampleRequest {
+  int32 integer_data = 1;
+}
+
+message GetExampleResponse {
+  repeated string string_data = 1;
+  bool bool_data = 2;
+}
